@@ -20,10 +20,9 @@ echo "The area of the circle is $result square meters." . PHP_EOL;
 echo "Enter the radius of the circle:" . PHP_EOL;
 $radius2 = (int) fgets(STDIN);
 
-function circleArea2 (int|float &$radius2): float {
+function circleArea2 (int|float &$radius2): void {
     $area = M_PI * ($radius2 ** 2);
-    return round($area, 2);
+    echo "The area of the circle is " . round($area, 2) . " square meters." . PHP_EOL;
 }
 
-$result = circleArea2($radius2);
-echo "The area of the circle is $result square meters." . PHP_EOL;
+circleArea2($radius2);
