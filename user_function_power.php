@@ -3,31 +3,33 @@
 // FUNCTION WITH &
 
 $number = 4;
-$exponent = 2;
 /***
  * @param int|float $number
- * @param int|float $exponent
- * @return void
+ * @return int|float
  */
-function power_1 (int|float &$number, int|float &$exponent): void {
-    echo pow($number, $exponent) . PHP_EOL;
+function power_1 (int|float &$number): int|float {
+    return pow($number, 2);
 };
-power_1($number, $exponent);
+print_r(power_1($number) . PHP_EOL);
+
+// Arrow Function
+
+$number = 6;
+$power_1 = fn ($number) => pow($number, 2);
+print_r($power_1($number) . PHP_EOL);
 
 // FUNCTION WITHOUT &
 
 /***
  * @param int|float $number
- * @param int|float $exponent
  * @return int|float
  */
-function power_2 (int|float $number, int|float $exponent): int|float {
-    return pow($number, $exponent);
+function power_2 (int|float $number): int|float {
+    return pow($number, 2);
 };
-print_r(power_2(4, 2) . PHP_EOL);
+print_r(power_2(4) . PHP_EOL);
 
 // Arrow Function
 
-$power_2 = fn ($number, $exponent) => pow($number, $exponent);
-print_r($power_2(6, 2) . PHP_EOL);
-
+$power_2 = fn ($number) => pow($number, 2);
+print_r($power_2(6) . PHP_EOL);
