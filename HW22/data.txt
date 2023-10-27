@@ -1,0 +1,25 @@
+//XML
+
+<note>
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+</note>
+
+//JSON
+
+{
+    "employee": {
+        "name": "Ann",
+        "salary": 56000,
+        "married": true
+    }
+}
+
+//HTML
+
+<div>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</div>
